@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
         callback('Unable to retrieve temperature info based on input paramaters provided. Try other search.', undefined)
         } else {
-        callback(undefined, `${body.daily.data[0].summary} Temerature is ${body.currently.temperature} degrees. and chances of rain is ${body.currently.precipProbability}%.`)  
+        callback(undefined, `${body.daily.data[0].summary} Temerature is ${body.currently.temperature} degrees. and chances of rain is ${body.currently.precipProbability}%. Minimum temperature is ${body.daily.data[0].temperatureMin} and Maximum temperature is ${body.daily.data[0].temperatureMax}`)  
      }
     })
 }
